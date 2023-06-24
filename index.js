@@ -34,7 +34,9 @@ app.get("/", (req, res) => {
     if (error) {
       throw error;
     }
-    res.send(`La fecha y hora actual es: ${results.rows[0].now}`);
+    const response = `La fecha y hora actual es: ${results.rows[0].now}`
+    //res.send(`La fecha y hora actual es: ${results.rows[0].now}`);
+    res.json( response);
   });
 });
 
